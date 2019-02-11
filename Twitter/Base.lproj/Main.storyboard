@@ -20,14 +20,18 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-50-MUt">
                                 <rect key="frame" x="145" y="312.5" width="85" height="42"/>
-                                <color key="backgroundColor" red="0.087584252449999997" green="0.48981767230000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1116195098" green="0.62902468440000003" blue="0.95000487570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aIr-50-MUt" secondAttribute="height" multiplier="49:36" constant="27.833333333333329" id="qmW-zc-bI8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.1116195098" green="0.62902468440000003" blue="0.95000487570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="TeD-ov-FyX" eventType="touchUpInside" id="GPt-xW-vSd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="-554.39999999999998" y="40.929535232383813"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="8Cu-jT-VF9">
             <objects>
-                <tableViewController id="wR7-VN-RQF" sceneMemberID="viewController">
+                <tableViewController id="wR7-VN-RQF" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CNb-Cg-5Hm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +74,14 @@
                             <outlet property="delegate" destination="wR7-VN-RQF" id="vXE-ju-Yfl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="c6b-le-CPZ"/>
+                    <navigationItem key="navigationItem" title="Home" id="c6b-le-CPZ">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="M6b-EO-OT2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="wR7-VN-RQF" id="QDG-9e-l3Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SW-pp-ZgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,6 +94,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="adX-In-eXs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.11161950975656509" green="0.6290246844291687" blue="0.95000487565994263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="wR7-VN-RQF" kind="relationship" relationship="rootViewController" id="vWm-v5-C0a"/>
