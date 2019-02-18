@@ -24,12 +24,15 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 User Stories 1-3, 5
+
 <img src='https://i.imgur.com/EompGhy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 User Stories 4
+
 <img src='https://i.imgur.com/pJLMe4C.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 Bonus Features
+
 <img src='https://i.imgur.com/FeeCExF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
