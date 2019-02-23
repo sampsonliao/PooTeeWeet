@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RSKPlaceholderTextView
 
 
 
@@ -15,10 +15,15 @@ class TweetViewController: UIViewController {
     
     
     @IBOutlet weak var tweetTextView: UITextView!
+    var textView: RSKPlaceholderTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tweetTextView.becomeFirstResponder()
+        
+        self.textView = RSKPlaceholderTextView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
+        self.textView.placeholder = "Say something..."
+        self.tweetTextView.addSubview(self.textView)
         // Do any additional setup after loading the view.
     }
     

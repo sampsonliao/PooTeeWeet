@@ -211,7 +211,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tweetTextView" destination="JiD-fK-Oiv" id="eLe-1W-Y3R"/>
+                        <outlet property="tweetTextView" destination="JiD-fK-Oiv" id="tuB-uz-cHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yu-kL-VIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
