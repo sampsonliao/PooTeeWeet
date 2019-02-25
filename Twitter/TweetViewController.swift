@@ -52,14 +52,15 @@ class TweetViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func tweet(_ sender: Any) {
-        if(!tweetTextView.text.isEmpty){
-            TwitterAPICaller.client?.postTweet(tweetString: tweetTextView.text, success: {
+        if(!textView.text.isEmpty){
+            TwitterAPICaller.client?.postTweet(tweetString: textView.text, success: {
                 self.dismiss(animated: true, completion: nil)
             }, failure: { (Error) in
                 print("Error posting tweet \(Error)")
                 self.dismiss(animated: true, completion: nil)
             })
         } else {
+            print("empty")
             self.dismiss(animated: true, completion: nil)
         }
     }
